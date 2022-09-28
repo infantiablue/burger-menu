@@ -1,0 +1,21 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+    height: 100vh;
+    background-color: antiquewhite;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 5px;
+    min-width: 375px;
+}
+
+.icon{
+    filter: invert(91%) sepia(100%) saturate(32%) hue-rotate(250deg) brightness(106%) contrast(100%);
+}
+.icon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
