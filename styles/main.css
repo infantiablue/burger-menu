@@ -1,21 +1,215 @@
-body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 14px;
-    height: 100vh;
-    background-color: antiquewhite;
-    box-sizing: border-box;
+:root {
+    --CORNSILK: #FEFAE0;
+    --DARK-GREEN: #606C38;
+    --EARTH-YELLOW: #DDA15E;
+    --KOMBU-GREEN: #283618;
+    --LIVER-DOGS: #BC6C25;
+    --WHITE: whitesmoke;
 }
 
-.container{
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+  
+body{
+    background-color: var(--CORNSILK);
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: var(--LIVER-DOGS);
+}
+
+p{
+    line-height: 1.3rem;
+    margin: 0;
+    padding: 0;
+    padding: 0.25rem;
+    text-align: justify;
+    word-spacing: 0.2rem;
+    word-wrap: break-word;
+}
+
+ul > li{
+    list-style-position: inside;
+    list-style-type:circle;
+    padding: 0.25rem 0;
+    text-indent: 1rem;
+}
+
+.hero-image{
+    background-position: center 25%;
+    background-size: cover;
+    background: url('/img/burger_unsplash.jpg') no-repeat;
+    display: block;
+    height: 25vh;
+    width: 100%;
+}
+
+.container {
+    box-sizing: border-box;
     margin: 0 auto;
-    padding: 5px;
-    min-width: 375px;
+    max-width: 980px;
+    width: 95%;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2{
+    border-bottom: 2px solid var(--KOMBU-GREEN);
+    color: var(--KOMBU-GREEN);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+h1.title{
+    color:var(--LIVER-DOGS);
+    margin: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reference{
+    color: var(--KOMBU-GREEN);
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 10px;
+    opacity: 0.75;
 }
 
 .icon{
     filter: invert(91%) sepia(100%) saturate(32%) hue-rotate(250deg) brightness(106%) contrast(100%);
 }
+
 .icon:hover{
-    transform: scale(1.2);
     cursor: pointer;
+    transform: scale(1.1);
+}
+
+.content{
+    display: grid;
+    gap: 15px;
+    grid-template: 2fr auto auto / 1fr 1fr 1fr;
+    height: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.player{
+    height: calc((100vw /5 )* 2 );
+    width: 100vw;
+}
+
+.feature{
+    box-sizing: border-box;
+    grid-column: 1/-1;
+}
+
+.quote{
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.quote::before{
+    color: var(--LIVER-DOGS);
+    content: '"';
+    font-size: 1.75rem;
+}
+
+.quote::after{
+    color: var(--LIVER-DOGS);
+    content: '"';
+    font-size: 1.75rem;
+}
+
+.demo img{
+    width: 90vw;
+}
+
+.usage{
+    grid-column: 1/-1;
+}
+
+.usage i{
+    color: var(--DARK-GREEN);
+    font-style: italic;
+}
+
+.source{
+    grid-column: 1/-1;
+}
+
+.credit > ul > li {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding: 0.25rem 0;
+    text-indent: 15px;
+}
+
+.highlight{
+    align-items: center;
+    background-color: var(--EARTH-YELLOW);
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 200px;
+}
+
+.highlight a{
+    color: var(--WHITE);
+    text-decoration: none;
+}
+
+footer{
+    align-items: center;
+    background-color: var(--KOMBU-GREEN);
+    box-sizing: border-box;
+    color: var(--WHITE);
+    display: flex;
+    height: 50px;
+    justify-content: center;
+}
+
+footer a{
+    padding-left: 5px;
+}
+
+@media (min-width:600px){
+    .feature{
+        grid-column: 1/2;
+    }
+
+    .demo{
+        grid-column: 2 / -1;
+    }    
+
+    .demo img{
+        width: 95%;
+    }
+
+    .player{
+        width: 500px;
+        height: 400px;
+    }
+
+    .source{
+        grid-column: 1/3;
+    }
+
+
 }

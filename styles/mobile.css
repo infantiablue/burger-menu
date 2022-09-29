@@ -1,0 +1,27 @@
+/* Responsive Menu */
+@media screen and (min-width: 600px) {
+    header{
+        align-items: center;
+        display: flex;
+    }
+    .menu-button{
+        display: none;
+    }
+    nav {
+        animation: none;
+        background-color: none;
+        display: block;
+    }
+    nav ul{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 5px;
+    }
+    nav > ul > li{
+        background-color: inherit;
+        border-top: none;
+        vertical-align: middle;
+        width: auto;
+    }
+
+}

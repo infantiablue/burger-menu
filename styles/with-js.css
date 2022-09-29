@@ -1,0 +1,10 @@
+.menu-button.close .menu-icon {
+    background-color: transparent;
+    transform: rotate(720deg);
+}
+.menu-button.close .menu-icon::before {
+    transform: translateX(-20px) rotate(45deg);
+}
+.menu-button.close .menu-icon::after {
+    transform: translateX(-20px) rotate(-45deg);
+}
