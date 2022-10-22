@@ -81,6 +81,7 @@ h1.title{
     margin: 1.5rem 0;
     text-align: center;
     text-transform: uppercase;
+    font-size: clamp(1.75rem, 2vw, 3rem); 
 }
 
 .reference{
